@@ -4,8 +4,9 @@
 🧰 主要功能一览
 1. 安装驱动程序（第一步）
 内置 ADB 驱动和高通 9008 驱动安装程序，一键启动对应的 .exe，无需手动寻找。
+注意！源码里没有ADB 驱动，你需要从https://wwaxi.lanzoub.com/iyWbd426qprg 密码:bsjv 里下载并放置在tools\driver里
 
-2. 解锁 BL（第二步）
+3. 解锁 BL（第二步）
 支持两种系统版本：
 
 鸿蒙2 - 鸿蒙3：通过 ADB 自动重启至 9008 模式，发送底层文件并刷写解锁镜像。
@@ -51,19 +52,6 @@ ADB 命令行：打开一个已配置好路径的命令行窗口，方便手动�
 
 刷入镜像时，单个分区失败不会停止，而是记录并继续，最后统一显示失败分区列表，方便排查。
 
-📁 目录结构要求
-工具需要以下文件夹和文件：
-
-text
-工具根目录\
-├── tools\            （adb.exe、fastboot.exe、7z.exe、QSaharaServer.exe、fh_loader.exe，以及 driver\adbdriver.exe、qcdriver.exe）
-├── unlock\           （Huawei865870_devprg.elf、Huawei865870_abl_unlock.img）
-├── system\           （存放 super.img 等镜像，以及 2.0.json ~ 4.2.json）
-├── base\             （底层 .zip 包）
-├── cache\            （自动创建/清空）
-├── tmp\              （自动创建）
-├── out\              （自动创建）
-└── screenshots\      （可选）
 💡 适用人群
 适合已经了解刷机风险、希望一站式完成 MatePad 11 解锁和刷机操作的用户。工具通过菜单引导降低了操作门槛，同时保留了手动模式和详细的错误提示，兼顾便捷性与可控性。
 
